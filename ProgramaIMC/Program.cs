@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ProgramaIMC
 {
-    public class Program
+    public partial class Program
     {   
         static void Main(string[] args)
         {
-
+            while (Menu()) ;
         }
 
         static bool Menu()
@@ -26,9 +26,9 @@ namespace ProgramaIMC
             {
                 case "1": IngresarPersona();
                     break;
-                case "2": //Mostrar;
+                case "2": MostrarPersona();
                     break;
-                case "3": //Buscar;
+                case "3": BuscarPersona();
                     break;
                 case "0": continuar = false;
                     break;
@@ -84,25 +84,15 @@ namespace ProgramaIMC
             Console.WriteLine("Su IMC es : {0}", peso / (estatura * estatura));
             Console.ReadKey();
 
+        }
+        static void MostrarPersona()
+        {
 
-           /* Console.WriteLine("Bienvenido a nuestro programa de IMC");
-            Console.WriteLine("Ingrese su nombre: ");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese su peso: ");
-            string peso = Console.ReadLine();
-            Console.WriteLine("Ingrese su estatura: ");
-            string estatura = Console.ReadLine();
-            Console.WriteLine("Ingrese su telefono: ");
-            string telefono = Console.ReadLine();
-            int pesoF = Int32.Parse(peso);
-            int estaturaF = Int32.Parse(estatura);
+        }
 
-            int imc = pesoF / (estaturaF * estaturaF);
+        static void BuscarPersona()
+        {
 
-            Console.WriteLine("Su IMC es de: " + imc );
-            
-            Console.ReadKey();
-           */
         }
     }
 }
