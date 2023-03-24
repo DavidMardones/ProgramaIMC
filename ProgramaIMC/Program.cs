@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgramaIMC.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,8 +9,38 @@ using System.Threading.Tasks;
 namespace ProgramaIMC
 {
     public class Program
-    {
+    {   
         static void Main(string[] args)
+        {
+
+        }
+
+        static bool Menu()
+        {
+            bool continuar = true;
+            Console.WriteLine("1. Ingresar");
+            Console.WriteLine("2. Mostrar");
+            Console.WriteLine("3. Buscar");
+            Console.WriteLine("0. Salir");
+            switch (Console.ReadLine().Trim())
+            {
+                case "1": IngresarPersona();
+                    break;
+                case "2": //Mostrar;
+                    break;
+                case "3": //Buscar;
+                    break;
+                case "0": continuar = false;
+                    break;
+                default: Console.WriteLine("Apriete bien una tecla gil!");
+                    break;
+            }
+            return continuar;
+        }
+
+
+
+        static void IngresarPersona()
         {
             string nombre;
             uint telefono;
@@ -42,6 +73,9 @@ namespace ProgramaIMC
                 Console.WriteLine("Ingrese su estatura: ");
                 esValido = Double.TryParse(Console.ReadLine(), out estatura);
             } while (!esValido);
+
+            Persona p = new Persona();
+            p.Nombre = nombre;
 
             Console.WriteLine("Nombre : {0} ", nombre);
             Console.WriteLine("Telefono : {0} ", telefono);
