@@ -14,5 +14,19 @@ namespace AdminPersonasModel.DAL
         private static List<Persona> personas = new List<Persona>();
 
         //2. Crear las operaciones ingresar, mostrar y buscar
+        public void AgregarPersona(Persona p)
+        {
+
+        }
+        public List<Persona> ObtenerPersonas()
+        {
+
+        }
+
+        public List<Persona> FiltrarPersonas(string nombre)
+        {
+
+        }
+
     }
 }
