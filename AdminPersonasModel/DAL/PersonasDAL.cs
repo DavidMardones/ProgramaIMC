@@ -48,7 +48,7 @@ namespace AdminPersonasModel.DAL
             }
             return filtrada;*/
 
-            return personas.FindAll(p => p.Nombre.ToLower() == nombre.ToLower();   
+            return personas.FindAll(p => p.Nombre.ToLower() == nombre.ToLower());   
 
         }
     }
