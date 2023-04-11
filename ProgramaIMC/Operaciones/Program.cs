@@ -86,7 +86,7 @@ namespace ProgramaIMC
             Console.WriteLine("Peso : {0} ", p.Peso);
             Console.WriteLine("Estatura : {0}", p.Estatura);
             Console.WriteLine("Su IMC es : {0}", p.IMC.Texto);
-            Console.ReadKey();
+
 
         }
     }
