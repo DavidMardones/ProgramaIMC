@@ -10,7 +10,7 @@ namespace ProgramaIMC
 {
     public partial class Program
     {
-        static PersonasDAL personasDAL = new PersonasDAL();
+        static IPersonasDAL personasDAL = new PersonasDALArchivos();
         static void MostrarPersona()
         {
             List<Persona> personas = personasDAL.ObtenerPersonas();
@@ -24,8 +24,8 @@ namespace ProgramaIMC
         static void BuscarPersona()
         {
             Console.WriteLine("Ingrese nombre: ");
-            new PersonasDAL().FiltrarPersonas(Console.ReadLine().Trim()).ForEach(p => Console.WriteLine("Nombre: {0} Peso: {1}", p.Nombre, p.Peso));
-            List<Persona> personas = new PersonasDAL().FiltrarPersonas(Console.ReadLine().Trim());
+            new PersonasDALObjetos().FiltrarPersonas(Console.ReadLine().Trim()).ForEach(p => Console.WriteLine("Nombre: {0} Peso: {1}", p.Nombre, p.Peso));
+            List<Persona> personas = new PersonasDALObjetos().FiltrarPersonas(Console.ReadLine().Trim());
             foreach(Persona p in personas)
             {
                 Console.WriteLine("Nombre: {0} Peso: {1}", p.Nombre, p.Peso);
